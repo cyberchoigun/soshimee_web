@@ -16,12 +16,6 @@
           history.back();
         }, 250)
       }
-      function httpGet(URL) {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", URL, false); //true = 비동기
-        xmlHttp.send(null);
-        return xmlHttp.responseText;
-      }
     </script>
     <h1 style="text-align: left;">서버 주소: soshimee.mcv.kr</h1>
     <h1 style="text-align: left;">서버 버전: 1.4.7-1.15.2</h1>
@@ -29,9 +23,5 @@
     <button class="mdl-button mdl-js-button mdl-js-ripple-effect" style="width: 100%; height: 50px;" onclick="back();">
       뒤로가기
     </button>
-    <script>
-      var ping = httpGet("https://api.mcsrvstat.us/ping/soshimee.mcv.kr");
-      pingparsed = JSON.parse(ping);
-    </script>
   </body>
 </html>
