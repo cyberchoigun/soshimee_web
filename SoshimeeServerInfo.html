@@ -38,7 +38,7 @@
 				document.querySelector('.status').innerHTML = status.online ? '온라인' : '오프라인';
 				document.querySelector('.version').innerHTML = status.server.name;
 				document.querySelector('.players').innerHTML = status.players.now+"/"+status.players.max;
-				document.querySelector('.duration').innerHTML = status.duration*1000000;
+				document.querySelector('.duration').innerHTML = status.duration/1000000;
 			});
 		</script>
 	</body>
