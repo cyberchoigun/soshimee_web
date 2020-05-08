@@ -16,6 +16,12 @@
           history.back();
         }, 250)
       }
+      function httpGet(URL) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", URL, false); //true = 비동기
+        xmlHttp.send(null);
+        return xmlHttp.responseText;
+      }
     </script>
     <h1 style="text-align: left;">서버 주소: soshimee.mcv.kr</h1>
     <h1 style="text-align: left;">서버 버전: 1.4.7-1.15.2</h1>
