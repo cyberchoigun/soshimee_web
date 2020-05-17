@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			html, body {background:#66CC66; text-align: center;}
+			.vc { top: 0; bottom:0; margin-top:auto; margin-bottom:auto; }
+			.hc { left:0; right:0; margin-left:auto; margin-right:auto; }
+			.ButtonEffect {
+			background: none;
+			border: 0;
+			box-sizing: border-box;
+			color: #8A2387;
+			cursor: pointer;
+			font-family: 'Josefin Sans', sans-serif;
+			font-size: 18px;
+			letter-spacing: 1.5px;
+			line-height: 90px;
+			outline: none;
+			overflow: hidden;
+			padding: 0px 0 0;
+			position: absolute;
+			text-transform: uppercase;
+			transition: all 0.2s ease-in;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			text-align: center;
+			left:50%;
+			top:10%;
+			}
+			.ButtonEffect::after {
+			background-color: pink;
+			content: '';
+			display: block;
+			height: 1px;
+			left: 0;
+			position: absolute;
+			transform-origin: center left;
+			transition: all 0.2s ease-in;
+			width: 141.4214px;
+			z-index: -1;
+			}
+			.ButtonEffect::after {
+			bottom: 0;
+			transform: rotate(0deg);
+			width:0%;
+			height:100%;
+			}
+			.ButtonEffect:hover {
+			color: #8A2387;
+			}
+			.ButtonEffect:hover::after {
+			height: 100%;
+			width: 100%;
+			}
+			.SelectedButtonEffect {
+			background: none;
+			border: 0;
+			box-sizing: border-box;
+			color: #8A2387;
+			cursor: pointer;
+			font-family: 'Josefin Sans', sans-serif;
+			font-size: 18px;
+			letter-spacing: 1.5px;
+			line-height: 90px;
+			outline: none;
+			overflow: hidden;
+			padding: 0px 0 0;
+			position: absolute;
+			text-transform: uppercase;
+			transition: all 0.2s ease-in;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			text-align: center;
+			left:50%;
+			top:10%;
+			}
+			.SelectedButtonEffect::after {
+			background-color: skyblue;
+			content: '';
+			display: block;
+			height: 1px;
+			left: 0;
+			position: absolute;
+			transform-origin: center left;
+			transition: all 0.2s ease-in;
+			width: 141.4214px;
+			z-index: -1;
+			}
+			.SelectedButtonEffect::after {
+			bottom: 0;
+			transform: rotate(0deg);
+			width:0%;
+			height:100%;
+			}
+			.SelectedButtonEffect:hover {
+			color: #8A2387;
+			}
+			.SelectedButtonEffect:hover::after {
+			height: 100%;
+			width: 100%;
+			}
+			.mdl-navigation {
+			position: relative;
+			text-align: center;
+			margin: 0;
+			min-height: 100vh;
+			padding: 0;
+			}
+			button {
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-family: 'Josefin Sans', sans-serif;
+			font-size: 18px;
+			letter-spacing: 1.5px;
+			line-height: 90px;
+			outline: none;
+			overflow: hidden;
+			padding: 0px 0 0;
+			position: absolute;
+			text-transform: uppercase;
+			transition: all 0.2s ease-in;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			text-align: center;
+			left:50%;
+			top:10%;
+			}
+		</style>
+		<title>soshimee server website</title>
+		<!--MDL 시작--> 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<!--MDL 끝-->
+		<!--JQuery 시작-->
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"></script>
+		<!--Jquery 끝-->
+		<!--Script 시작-->
+		<script>
+			var MainDrawer = document.getElementById('MainDrawer');
+			
+			
+			function SoshimeeServerInfo() {
+			  setTimeout(() => {
+			    location.href="./SoshimeeServerInfo_en.html?Drawer=opened";
+			  }, 250);
+			}
+			function TheSoshimeeServer() {
+			  setTimeout(() => {
+			    location.href="./PromotionVideo_en.html?Drawer=opened";
+			  }, 250)
+			}
+			function WebMain() {
+			  setTimeout(() => {
+			    location.href="./index_en.html?Drawer=opened";
+			  }, 250)
+			}
+			function ToggleDrawer() {
+			  MainDrawer.classList.toggle('is-visible');
+			}
+		</script>
+		<!--Script 끝-->
+		<!--Loading 시작-->
+		<script>
+			$(window).load(function() {
+			  $('#loading').hide();
+			});
+		</script>
+		<!--Loading 끝-->
+	</head>
+	<body id="body">
+		<div class="mdl-layout mdl-js-layout">
+			<div id="MainDrawer" class="mdl-layout__drawer">
+				<span class="mdl-layout-title">메뉴</span>
+				<nav class="mdl-navigation">
+					<button class="SelectedButtonEffect mdl-button" style="text-align: right;">
+					メインメニュー
+					</button>
+					<button onclick="SoshimeeServerInfo()" class="ButtonEffect mdl-button mdl-js-button mdl-js-ripple-effect" style="text-align: right;">
+					サーバー情報
+					</button>
+					<button onclick="TheSoshimeeServer()" class="ButtonEffect mdl-button mdl-js-button mdl-js-ripple-effect" style="text-align: right;">
+					映像
+					</button>
+					<button onclick="" class="ButtonEffect mdl-button mdl-js-button mdl-js-ripple-effect">
+					閉じる
+					</button>
+				</nav>
+			</div>
+			<main class="mdl-layout__content">
+				<div class="page-content">
+					<img src="./Logo.png" width="500">
+					<button class="mdl-button mdl-js-button mdl-js-ripple-effect" style="width: 100%; height: 50px;" onclick="SoshimeeServerInfo();">
+					メインメニュー
+					</button>
+					<button class="mdl-button mdl-js-button mdl-js-ripple-effect" style="width: 100%; height: 50px;" onclick="location='http://soshimee.zz.am:8123/'">
+					サーバー情報
+					</button>
+					<button class="mdl-button mdl-js-button mdl-js-ripple-effect" style="width: 100%; height: 50px;" onclick="TheSoshimeeServer();">
+					映像
+					</button>
+				</div>
+			</main>
+		</div>
+		<main class="mdl-layout__content">
+		</main>
+		<br>
+	</body>
+</html>
